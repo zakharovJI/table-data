@@ -1,0 +1,7 @@
+mixin BrandTableRowEditableCell(bem, data)
+  +b('brand-table-row-editable-cell', bem)&attributes(attributes)
+    +e('container', {})
+      +e('text', {}) !{data || ''}
+      +e('input', {t: 'label'})
+        +e('label')
+        +e('field', {t: 'input'})(value=data || '')

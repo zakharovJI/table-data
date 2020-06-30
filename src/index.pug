@@ -1,11 +1,15 @@
 include ../node_modules/bempug/index
-    - BEMPUG.modifier = '_';
+  - BEMPUG.modifier = '_';
 
 //- blocks imports
 include ./blocks/header/header
+include ./blocks/main-table/main-table
 
 doctype html
 html
-    include ./blocks/head/head
-    body
-        +header
+  include ./blocks/head/head
+  body
+    +b('app', {})
+      +header
+      section
+        +main-table({}, table)

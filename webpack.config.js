@@ -80,6 +80,7 @@ module.exports = {
             query: {
               data: {
                 header: require('./src/data/header.json'),
+                table: require('./src/data/table.json'),
               },
               pretty: true
             }

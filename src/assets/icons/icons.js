@@ -1,1 +1,1 @@
-// import "./icon-name.svg"
+import "./plus.svg"

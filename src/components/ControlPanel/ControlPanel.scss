@@ -1,0 +1,41 @@
+.control-panel {
+  $self: &;
+
+  display: flex;
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: 20px;
+  position: sticky;
+  bottom: 20px;
+  z-index: 1000;
+
+  &__floating-btn {
+    position: relative;
+    margin-left: auto;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    color: $light;
+    font-size: 55px;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $additional-bg-color;
+    cursor: pointer;
+
+
+    &:hover {
+      background-color: darken($additional-bg-color, 5%);
+    }
+
+    &:active{
+      background-color: darken($additional-bg-color, 10%);
+    }
+
+    & #{$self}__icon {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}

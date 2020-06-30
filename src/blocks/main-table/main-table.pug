@@ -1,0 +1,10 @@
+- BEMPUG.modifier = '_';
+include ../../components/BrandTable/BrandTable
+include ../../components/ControlPanel/ControlPanel
+
+
+mixin main-table
+  +b('main-table', bem)&attributes(attributes)
+    +e('container', {})
+      +BrandTable({}, table)
+    +ControlPanel({}, {})

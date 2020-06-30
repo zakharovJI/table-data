@@ -1,4 +1,5 @@
 $light:               #ffffff;
+$light-gray:          #f2f2f2;
 $black:               #000000;
 $black-two:           #090909;
 $black-three:         #202020;
@@ -16,5 +17,11 @@ $blue:                #004fba;
 $azure:               #19a3fa;
 $azul:                #297ce5;
 $sky-blue:            #60a6ff;
+$sunset-red:          #ff4d53;
 
 $primary-text-color: $brownish-grey;
+$primary-bg-color: $light-gray;
+$additional-bg-color: $azure;
+$delete: $sunset-red;
+
+$base-transition-interval: .25s;

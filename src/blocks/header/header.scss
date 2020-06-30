@@ -5,12 +5,15 @@
 
   font-family: 'MuseoModerno', sans-serif;
   height: 100px;
-  @include container();
+  width: 100%;
+  background-color: $light-gray;
 
   &__container {
     height: 100%;
     align-items: center;
     display: flex;
+    @include container();
+
   }
 
   &__title {

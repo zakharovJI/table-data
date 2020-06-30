@@ -1,0 +1,14 @@
+- BEMPUG.modifier = '_';
+include ../BrandTableRowEditableCell/BrandTableRowEditableCell
+
+mixin BrandTableRow(bem, data)
+  +b('brand-table-row', bem)&attributes(attributes)
+    +e('foreground', {})
+      for item, index in Object.values(data)
+        +e('data', {t: '', m: Object.keys(data)[index]})
+          if Object.keys(data)[index] !== 'color'
+            +BrandTableRowEditableCell({t: '', m: Object.keys(data)[index]}, item)
+          else
+            +e('text', {m: 'color'})(data-color=item) !{item}
+            +e('', {b: 'color-picker'})
+    +e('background', {t: ''})

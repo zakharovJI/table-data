@@ -1,5 +1,7 @@
+@import '../../../node_modules/@simonwep/pickr/dist/themes/classic.min.css';
 @import "./helpers/gui";
 @import "./helpers/grid";
+@import "./helpers/picker";
 // Blocks styles
 @import "../../blocks/**/*.scss";
 // Components styles
@@ -23,6 +25,7 @@ body {
   font-size: 18px;
   color: $primary-text-color;
   -webkit-font-smoothing: antialiased;
+  overflow: hidden;
   @include to-sm() {
     font-size: 15px;
   }
@@ -42,5 +45,25 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+button {
+  border: none;
+}
+
+section {
+  @include container();
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  padding-top: 50px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 

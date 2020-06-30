@@ -1,0 +1,61 @@
+.brand-table-row-editable-cell {
+  $self: &;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    min-width: 50px;
+    height: 30px;
+  }
+
+  & #{$self}__text {
+    cursor: text;
+    width: 100%;
+    opacity: 1;
+
+    &_empty {
+      color: $primary-text-color;
+      user-select: none;
+    }
+
+    &_disabled {
+      color: $primary-text-color;
+      user-select: none;
+    }
+  }
+
+  & #{$self}__description {
+    padding-left: 0.2rem;
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    opacity: 0;
+
+    #{$self}__field {
+      width: 100%;
+      min-height: auto;
+      border: none;
+      background-color: transparent;
+      font-size: 18px;
+      box-shadow: 0 -1px 0 0 inset $additional-bg-color;
+      padding-bottom: 3px;
+    }
+  }
+
+  &_state-edit {
+    & #{$self}__text {
+      opacity: 0;
+    }
+
+    & #{$self}__input {
+      opacity: 1;
+    }
+  }
+}

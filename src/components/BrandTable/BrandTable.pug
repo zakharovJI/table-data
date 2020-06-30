@@ -1,0 +1,10 @@
+- BEMPUG.modifier = '_';
+include ../../components/BrandTableRow/BrandTableRow
+
+
+mixin BrandTable(bem, data)
+  +b('brand-table', bem, 'div')&attributes(attributes)
+    +e('head', {t: 'div'})
+        for item in data.head
+          +e('data', {m: Object.keys(item)[0]}) !{item[Object.keys(item)[0]]}
+    +e('body', {t: ''})

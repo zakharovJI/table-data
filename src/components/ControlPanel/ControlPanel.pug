@@ -1,0 +1,7 @@
+- BEMPUG.modifier = '_';
+
+mixin ControlPanel(bem, data)
+  +b('control-panel', bem)&attributes(attributes)
+    +e('floating-btn', {t: 'button'})
+      +e('icon', {t: 'svg'})
+        use(xlink:href="#plus")

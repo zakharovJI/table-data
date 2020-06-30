@@ -48,6 +48,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.5.5",
+    "@simonwep/pickr": "^1.7.1",
     "normalize-scss": "^7.0.1"
   }
 }
